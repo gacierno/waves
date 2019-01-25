@@ -5,7 +5,7 @@ senoidal.css and senoidal.js
 into your html code
 
 Also a tag with app-sin id declared
-<div id="app-sin"></div>
+```<div id="app-sin"></div>
 
 ## Facts
 
