@@ -1,0 +1,39 @@
+.msg{
+	position: relative;
+	display: inline-block;
+	margin: 0px 120px 0 30px;
+	vertical-align: text-top;
+}
+#ruler{
+	height: 190px;
+	width: 950px;
+	background: url('../../assets/img/line-1.png') no-repeat;
+	top: 0;
+	left: 0;
+}
+#wave{
+	height: 190px;
+	border: 0px solid blue;
+	background: url('../../assets/img/line-2-points.png') no-repeat;
+	top: 0;
+	left: 0;
+}
+.msg_hidden{
+	display: none;
+}
+
+@media ( max-width: 990px ){
+	#ruler{
+		left: 190px;
+		position: absolute;
+		transform-origin: top left;
+		transform: rotate( 90deg );
+
+	}
+	.msg:not(.msg_hidden){
+		left: 190px;
+		display: block;
+		margin: 40px 0 350px 0px;
+	}
+
+}
