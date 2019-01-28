@@ -19,7 +19,8 @@
 	left: 0;
 }
 .msg_hidden{
-	display: none;
+	/*display: none;*/
+	opacity: 0;
 }
 
 @media ( max-width: 990px ){

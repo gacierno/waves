@@ -53,9 +53,17 @@ function senoidal(
 	// function animates messages while wave grows
 	this.animateMsg = function( item ){
 		let hMsg = document.getElementsByClassName('msg')[ item ];
+		let relativeTime = 0;
 		if( hMsg){
 			//hMsg.style.left = actualPix + 'px' ;
-			hMsg.classList.remove( 'msg_hidden' );
+			// hMsg.classList.remove( 'msg_hidden' );
+			let timer2 = setInterval(
+				function(){
+					relativeTime = relativeTime + 0.02;
+					hMsg.style.opacity = (relativeTime);
+					if( (relativeTime) > 1)clearInterval(timer2);
+				}, 10
+			)
 		}
 		
 	}
@@ -64,7 +72,7 @@ function senoidal(
 	this.hideMsgs = function(){
 		let hMsg = document.getElementsByClassName('msg');
 		for( var i = 0; i < hMsg.length; i ++ ){
-			hMsg[i].classList.add( 'msg_hidden' );
+			hMsg[i].style.opacity = 0;
 		}
 	}
 
