@@ -31,7 +31,7 @@
 		transform: rotate( 90deg );
 
 	}
-	.msg:not(.msg_hidden){
+	.msg.msg_hidden{
 		left: 190px;
 		display: block;
 		margin: 40px 0 350px 0px;
