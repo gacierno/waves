@@ -1,4 +1,4 @@
-.msg{
+/*.msg{
 	position: relative;
 	display: inline-block;
 	margin: 0px 120px 0 30px;
@@ -19,7 +19,6 @@
 	left: 0;
 }
 .msg_hidden{
-	/*display: none;*/
 	opacity: 0;
 }
 
@@ -37,4 +36,99 @@
 		margin: 40px 0 350px 0px;
 	}
 
+}*/
+
+#app-sin {
+	text-align: left;
+	display: inline-block;
+	margin-top: 120px;
+	position: relative;
+}
+.msg {
+	position: relative;
+	display: inline-block;
+	vertical-align: text-top;
+	font-size: 11px;
+	font-weight: bold;
+	font-style: normal;
+	font-stretch: normal;
+	line-height: 1.45;
+	letter-spacing: 1px;
+	color: blue;
+	text-transform: uppercase;
+
+	height: 50px;
+}
+#ruler{
+	height: 190px;
+	width: 950px;
+	background: url('../../assets/img/line-1.png') no-repeat;
+	top: 0;
+	left: 0;
+}
+#wave{
+	height: 190px;
+	border: 0px solid blue;
+	background: url('../../assets/img/line-2-points.png') no-repeat;
+	top: 0;
+	left: 0;
+}
+.msg_hidden{
+	opacity: 0;
+}
+#m0 {
+	float: left;
+	margin-left: 40px;
+	margin-right: 100px;
+}
+#m2 {
+	float: right;
+	text-align: right;
+	margin-right: 40px;
+}
+.fisheries-mobile {
+	max-width: 320px;
+	display: none;
+	margin-top: 50px;
+}
+
+@media all and (max-width: 990px) {
+	#app-sin{
+		height: 400px;
+		width: 100%;
+	}
+	#wave{
+		background: url('../../assets/img/line-2-points-mobile.png') no-repeat;
+	}
+	#ruler{
+		width: 400px;
+		background-size: contain;
+		left: 90px;
+		position: relative;
+		transform-origin: top left;
+		transform: rotate( 90deg );
+		position: relative;
+	}
+	.msg{
+		left: 90px!important;
+		display: block!important;
+		margin: 0;
+		margin: 0 0 0 -30px!important;
+		position: relative;
+		display: inline-block;
+		vertical-align: text-top;
+		height: auto;
+		width: 160px;
+	}
+	#m0 {
+		top: -160px;
+	}
+	#m1 {
+		top: 50px;
+	}
+	#m2 {
+		top: 100px;
+		text-align: left;
+		float: left;
+	}
 }

@@ -77,7 +77,6 @@ function senoidal(
 	}
 
 	this.animateAll = function(){
-		
 		let timer;
 		let animationDuration = 5; // in seconds
 		// this number is the result of divide the wave length by the animation estimated duration
@@ -87,6 +86,13 @@ function senoidal(
 
 		timer = setInterval(
 			function(){
+				if( document.documentElement.clientWidth < 950 ){
+					maxWidth = 400;
+					pixelsPerSec = maxWidth/animationDuration;
+				}else{
+					maxWidth = options.maxWidth;
+					pixelsPerSec = maxWidth/animationDuration;
+				}
 				actualPix += ( pixelsPerSec * timeInter / 1000 ) ;
 				if( actualPix > 2*maxWidth ){
 					actualPix = 0;
